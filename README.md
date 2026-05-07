@@ -5,6 +5,23 @@
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.0-lightgrey)](https://soliditylang.org/)
 [![React](https://img.shields.io/badge/React-18.0-blue)](https://reactjs.org/)
 
+## Changes for take-home
+
+### New endpoint: `GET /api/market/summary`
+Read-only summary endpoint added per spec.
+
+- Handler: `getMarketSummary` in `backend/src/controllers/market.controller.js`. Awaits `tokenService.countTokens()` and `marketService.getMarketData()`, then pulls `totalTrades` and `totalVolume` off the returned object and stamps `generatedAt` with `new Date().toISOString()`. Errors are forwarded to `next` to match the rest of the file.
+- Route: registered in `backend/src/routes/market.routes.js` as `marketRouter.get('/summary', getMarketSummary)`
+
+Response shape:
+```json
+{
+  "tokensListed": 247,
+  "totalTrades": 5432,
+  "totalVolume": "12400000",
+  "generatedAt": "2026-05-07T02:33:44.907Z"
+}
+---------------------
 **StockX** is a decentralized, AI-powered stock exchange platform designed to enable secure, transparent, and near-real-time trading of tokenized equities. By combining blockchain-based settlement, smart contract automation, decentralized identity, and AI-driven market intelligence, StockX removes traditional intermediaries while preserving regulatory compliance and institutional-grade reliability.
 
 ## 🎯 Key Features
