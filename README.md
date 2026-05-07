@@ -21,7 +21,7 @@ Response shape:
   "totalVolume": "12400000",
   "generatedAt": "2026-05-07T02:33:44.907Z"
 }
----------------------
+
 **StockX** is a decentralized, AI-powered stock exchange platform designed to enable secure, transparent, and near-real-time trading of tokenized equities. By combining blockchain-based settlement, smart contract automation, decentralized identity, and AI-driven market intelligence, StockX removes traditional intermediaries while preserving regulatory compliance and institutional-grade reliability.
 
 ## 🎯 Key Features
